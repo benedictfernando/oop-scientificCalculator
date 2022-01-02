@@ -70,7 +70,7 @@
             this.equals = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.entryValue = new System.Windows.Forms.Label();
+            this.entry = new System.Windows.Forms.Label();
             this.equation = new System.Windows.Forms.TextBox();
             this.calculatorLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
@@ -165,6 +165,7 @@
             this.clearAll.TabIndex = 38;
             this.clearAll.Text = "C";
             this.clearAll.UseVisualStyleBackColor = true;
+            this.clearAll.Click += new System.EventHandler(this.clearAll_Click);
             // 
             // clearEntry
             // 
@@ -175,6 +176,7 @@
             this.clearEntry.TabIndex = 37;
             this.clearEntry.Text = "CE";
             this.clearEntry.UseVisualStyleBackColor = true;
+            this.clearEntry.Click += new System.EventHandler(this.clearEntry_Click);
             // 
             // euler
             // 
@@ -195,6 +197,7 @@
             this.decimalPoint.TabIndex = 33;
             this.decimalPoint.Text = ".";
             this.decimalPoint.UseVisualStyleBackColor = true;
+            this.decimalPoint.Click += new System.EventHandler(this.decimalPoint_Click);
             // 
             // zero
             // 
@@ -206,6 +209,7 @@
             this.zero.TabIndex = 32;
             this.zero.Text = "0";
             this.zero.UseVisualStyleBackColor = true;
+            this.zero.Click += new System.EventHandler(this.zero_Click);
             // 
             // signToggle
             // 
@@ -216,6 +220,7 @@
             this.signToggle.TabIndex = 31;
             this.signToggle.Text = "+/-";
             this.signToggle.UseVisualStyleBackColor = true;
+            this.signToggle.Click += new System.EventHandler(this.signToggle_Click);
             // 
             // naturalLogarithm
             // 
@@ -237,6 +242,7 @@
             this.three.TabIndex = 28;
             this.three.Text = "3";
             this.three.UseVisualStyleBackColor = true;
+            this.three.Click += new System.EventHandler(this.numberEntry);
             // 
             // two
             // 
@@ -248,6 +254,7 @@
             this.two.TabIndex = 27;
             this.two.Text = "2";
             this.two.UseVisualStyleBackColor = true;
+            this.two.Click += new System.EventHandler(this.numberEntry);
             // 
             // one
             // 
@@ -259,6 +266,7 @@
             this.one.TabIndex = 26;
             this.one.Text = "1";
             this.one.UseVisualStyleBackColor = true;
+            this.one.Click += new System.EventHandler(this.numberEntry);
             // 
             // logarithm
             // 
@@ -280,6 +288,7 @@
             this.six.TabIndex = 23;
             this.six.Text = "6";
             this.six.UseVisualStyleBackColor = true;
+            this.six.Click += new System.EventHandler(this.numberEntry);
             // 
             // five
             // 
@@ -291,6 +300,7 @@
             this.five.TabIndex = 22;
             this.five.Text = "5";
             this.five.UseVisualStyleBackColor = true;
+            this.five.Click += new System.EventHandler(this.numberEntry);
             // 
             // four
             // 
@@ -302,6 +312,7 @@
             this.four.TabIndex = 21;
             this.four.Text = "4";
             this.four.UseVisualStyleBackColor = true;
+            this.four.Click += new System.EventHandler(this.numberEntry);
             // 
             // twoRaisedTo
             // 
@@ -323,6 +334,7 @@
             this.nine.TabIndex = 18;
             this.nine.Text = "9";
             this.nine.UseVisualStyleBackColor = true;
+            this.nine.Click += new System.EventHandler(this.numberEntry);
             // 
             // eight
             // 
@@ -334,6 +346,7 @@
             this.eight.TabIndex = 17;
             this.eight.Text = "8";
             this.eight.UseVisualStyleBackColor = true;
+            this.eight.Click += new System.EventHandler(this.numberEntry);
             // 
             // seven
             // 
@@ -345,6 +358,7 @@
             this.seven.TabIndex = 16;
             this.seven.Text = "7";
             this.seven.UseVisualStyleBackColor = true;
+            this.seven.Click += new System.EventHandler(this.numberEntry);
             // 
             // squared
             // 
@@ -571,7 +585,7 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.entryValue, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.entry, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.equation, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.calculatorLabel, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -584,17 +598,18 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(384, 145);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // entryValue
+            // entry
             // 
-            this.entryValue.AutoSize = true;
-            this.entryValue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.entryValue.Font = new System.Drawing.Font("Segoe UI", 27F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.entryValue.Location = new System.Drawing.Point(3, 81);
-            this.entryValue.Name = "entryValue";
-            this.entryValue.Size = new System.Drawing.Size(378, 64);
-            this.entryValue.TabIndex = 0;
-            this.entryValue.Text = "0";
-            this.entryValue.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.entry.AutoSize = true;
+            this.entry.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.entry.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.entry.Font = new System.Drawing.Font("Segoe UI", 27F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.entry.Location = new System.Drawing.Point(3, 81);
+            this.entry.Name = "entry";
+            this.entry.Size = new System.Drawing.Size(378, 64);
+            this.entry.TabIndex = 0;
+            this.entry.Text = "0";
+            this.entry.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // equation
             // 
@@ -611,6 +626,7 @@
             // calculatorLabel
             // 
             this.calculatorLabel.AutoSize = true;
+            this.calculatorLabel.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.calculatorLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.calculatorLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.calculatorLabel.Location = new System.Drawing.Point(3, 0);
@@ -686,7 +702,7 @@
         private System.Windows.Forms.Button equals;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Label entryValue;
+        private System.Windows.Forms.Label entry;
         private System.Windows.Forms.TextBox equation;
         private System.Windows.Forms.Label calculatorLabel;
     }
