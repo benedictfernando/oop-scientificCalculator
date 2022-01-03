@@ -187,6 +187,7 @@
             this.euler.TabIndex = 36;
             this.euler.Text = "e";
             this.euler.UseVisualStyleBackColor = true;
+            this.euler.Click += new System.EventHandler(this.constants_Click);
             // 
             // decimalPoint
             // 
@@ -509,6 +510,7 @@
             this.pi.TabIndex = 35;
             this.pi.Text = "pi";
             this.pi.UseVisualStyleBackColor = true;
+            this.pi.Click += new System.EventHandler(this.constants_Click);
             // 
             // divide
             // 

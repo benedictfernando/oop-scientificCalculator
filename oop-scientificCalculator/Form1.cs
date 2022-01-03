@@ -31,8 +31,18 @@ namespace oop_scientificCalculator
 
         private void numbers_Click(object sender, EventArgs e)
         {
-            if (entry.Text == "0") entry.Text = "";
+            if (entry.Text == "3.1415926535897931" ||
+                entry.Text == "2.7182818284590451" ||
+                entry.Text == "0") entry.Text = "";
             entry.Text += (sender as Button).Text;
+        }
+
+        private void constants_Click(object sender, EventArgs e)
+        {
+            if ((sender as Button).Name == "pi")
+                entry.Text = "3.1415926535897931";
+            else if ((sender as Button).Name == "euler")
+                entry.Text = "2.7182818284590451";
         }
 
         private void signToggle_Click(object sender, EventArgs e)
