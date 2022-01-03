@@ -29,6 +29,12 @@ namespace oop_scientificCalculator
             entry.Text = "0"; equation.Text = ""; entryValue = 0;
         }
 
+        private void backspace_Click(object sender, EventArgs e)
+        {
+            entry.Text = entry.Text.Remove(entry.Text.Length - 1);
+            if (entry.Text == "") entry.Text = "0";
+        }
+
         private void numbers_Click(object sender, EventArgs e)
         {
             if (entry.Text == "3.1415926535897931" ||
