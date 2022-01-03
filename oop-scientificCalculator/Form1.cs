@@ -83,6 +83,45 @@ namespace oop_scientificCalculator
                 case "divide":
                     entry.Text = (entryValue / Double.Parse(entry.Text)).ToString();
                     break;
+                // case "modulus":
+
+                // case "logarithm":
+
+                // case "naturalLogarithm":
+
+
+                // for algrebraic equations
+
+                // case "root":
+
+                // case "exponent":
+
+                // case "squareRoot":
+
+                // case "square":
+
+                // case "twoRaisedto":
+
+                // case "inverse":
+
+
+                // for statistical equations
+
+                // case "factorial":
+
+                // case "exponential":
+
+                // case "absolute":
+
+
+                // for trigonometric equations
+
+                // case "sine":
+
+                // case "cosine":
+
+                // case "tangent":
+
 
                 default: break;
             }
