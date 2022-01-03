@@ -136,6 +136,31 @@ namespace oop_scientificCalculator
             multiOperator = (sender as Button).Name;
         }
 
+        private void modulus_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void root_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exponent_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void openParenthesis_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void closeParenthesis_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void equals_Click(object sender, EventArgs e)
         {
             anotherEntry = Double.Parse(entry.Text);

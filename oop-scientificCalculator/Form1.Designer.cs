@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculator));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.backspace = new System.Windows.Forms.Button();
             this.clearAll = new System.Windows.Forms.Button();
@@ -131,6 +132,7 @@
             this.tableLayoutPanel1.Controls.Add(this.equals, 4, 6);
             this.tableLayoutPanel1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 8;
@@ -148,35 +150,39 @@
             // 
             // backspace
             // 
+            this.backspace.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.backspace.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backspace.BackgroundImage")));
+            this.backspace.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.backspace.Dock = System.Windows.Forms.DockStyle.Fill;
             this.backspace.Location = new System.Drawing.Point(427, 3);
             this.backspace.Name = "backspace";
             this.backspace.Size = new System.Drawing.Size(104, 41);
             this.backspace.TabIndex = 39;
-            this.backspace.Text = "Bkspc";
-            this.backspace.UseVisualStyleBackColor = true;
+            this.backspace.UseVisualStyleBackColor = false;
             this.backspace.Click += new System.EventHandler(this.backspace_Click);
             // 
             // clearAll
             // 
+            this.clearAll.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.clearAll.Dock = System.Windows.Forms.DockStyle.Fill;
             this.clearAll.Location = new System.Drawing.Point(321, 3);
             this.clearAll.Name = "clearAll";
             this.clearAll.Size = new System.Drawing.Size(100, 41);
             this.clearAll.TabIndex = 38;
             this.clearAll.Text = "C";
-            this.clearAll.UseVisualStyleBackColor = true;
+            this.clearAll.UseVisualStyleBackColor = false;
             this.clearAll.Click += new System.EventHandler(this.clearAll_Click);
             // 
             // clearEntry
             // 
+            this.clearEntry.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.clearEntry.Dock = System.Windows.Forms.DockStyle.Fill;
             this.clearEntry.Location = new System.Drawing.Point(215, 3);
             this.clearEntry.Name = "clearEntry";
             this.clearEntry.Size = new System.Drawing.Size(100, 41);
             this.clearEntry.TabIndex = 37;
             this.clearEntry.Text = "CE";
-            this.clearEntry.UseVisualStyleBackColor = true;
+            this.clearEntry.UseVisualStyleBackColor = false;
             this.clearEntry.Click += new System.EventHandler(this.clearEntry_Click);
             // 
             // euler
@@ -192,36 +198,39 @@
             // 
             // decimalPoint
             // 
+            this.decimalPoint.BackColor = System.Drawing.SystemColors.Menu;
             this.decimalPoint.Dock = System.Windows.Forms.DockStyle.Fill;
             this.decimalPoint.Location = new System.Drawing.Point(321, 332);
             this.decimalPoint.Name = "decimalPoint";
             this.decimalPoint.Size = new System.Drawing.Size(100, 48);
             this.decimalPoint.TabIndex = 33;
             this.decimalPoint.Text = ".";
-            this.decimalPoint.UseVisualStyleBackColor = true;
+            this.decimalPoint.UseVisualStyleBackColor = false;
             this.decimalPoint.Click += new System.EventHandler(this.decimalPoint_Click);
             // 
             // zero
             // 
+            this.zero.BackColor = System.Drawing.SystemColors.Menu;
             this.zero.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.zero.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.zero.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.zero.Location = new System.Drawing.Point(215, 332);
             this.zero.Name = "zero";
             this.zero.Size = new System.Drawing.Size(100, 48);
             this.zero.TabIndex = 32;
             this.zero.Text = "0";
-            this.zero.UseVisualStyleBackColor = true;
+            this.zero.UseVisualStyleBackColor = false;
             this.zero.Click += new System.EventHandler(this.numbers_Click);
             // 
             // signToggle
             // 
+            this.signToggle.BackColor = System.Drawing.SystemColors.Menu;
             this.signToggle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.signToggle.Location = new System.Drawing.Point(109, 332);
             this.signToggle.Name = "signToggle";
             this.signToggle.Size = new System.Drawing.Size(100, 48);
             this.signToggle.TabIndex = 31;
-            this.signToggle.Text = "+/-";
-            this.signToggle.UseVisualStyleBackColor = true;
+            this.signToggle.Text = "⁺/₋";
+            this.signToggle.UseVisualStyleBackColor = false;
             this.signToggle.Click += new System.EventHandler(this.signToggle_Click);
             // 
             // naturalLogarithm
@@ -237,38 +246,41 @@
             // 
             // three
             // 
+            this.three.BackColor = System.Drawing.SystemColors.Menu;
             this.three.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.three.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.three.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.three.Location = new System.Drawing.Point(321, 285);
             this.three.Name = "three";
             this.three.Size = new System.Drawing.Size(100, 41);
             this.three.TabIndex = 28;
             this.three.Text = "3";
-            this.three.UseVisualStyleBackColor = true;
+            this.three.UseVisualStyleBackColor = false;
             this.three.Click += new System.EventHandler(this.numbers_Click);
             // 
             // two
             // 
+            this.two.BackColor = System.Drawing.SystemColors.Menu;
             this.two.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.two.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.two.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.two.Location = new System.Drawing.Point(215, 285);
             this.two.Name = "two";
             this.two.Size = new System.Drawing.Size(100, 41);
             this.two.TabIndex = 27;
             this.two.Text = "2";
-            this.two.UseVisualStyleBackColor = true;
+            this.two.UseVisualStyleBackColor = false;
             this.two.Click += new System.EventHandler(this.numbers_Click);
             // 
             // one
             // 
+            this.one.BackColor = System.Drawing.SystemColors.Menu;
             this.one.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.one.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.one.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.one.Location = new System.Drawing.Point(109, 285);
             this.one.Name = "one";
             this.one.Size = new System.Drawing.Size(100, 41);
             this.one.TabIndex = 26;
             this.one.Text = "1";
-            this.one.UseVisualStyleBackColor = true;
+            this.one.UseVisualStyleBackColor = false;
             this.one.Click += new System.EventHandler(this.numbers_Click);
             // 
             // logarithm
@@ -284,38 +296,41 @@
             // 
             // six
             // 
+            this.six.BackColor = System.Drawing.SystemColors.Menu;
             this.six.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.six.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.six.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.six.Location = new System.Drawing.Point(321, 238);
             this.six.Name = "six";
             this.six.Size = new System.Drawing.Size(100, 41);
             this.six.TabIndex = 23;
             this.six.Text = "6";
-            this.six.UseVisualStyleBackColor = true;
+            this.six.UseVisualStyleBackColor = false;
             this.six.Click += new System.EventHandler(this.numbers_Click);
             // 
             // five
             // 
+            this.five.BackColor = System.Drawing.SystemColors.Menu;
             this.five.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.five.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.five.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.five.Location = new System.Drawing.Point(215, 238);
             this.five.Name = "five";
             this.five.Size = new System.Drawing.Size(100, 41);
             this.five.TabIndex = 22;
             this.five.Text = "5";
-            this.five.UseVisualStyleBackColor = true;
+            this.five.UseVisualStyleBackColor = false;
             this.five.Click += new System.EventHandler(this.numbers_Click);
             // 
             // four
             // 
+            this.four.BackColor = System.Drawing.SystemColors.Menu;
             this.four.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.four.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.four.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.four.Location = new System.Drawing.Point(109, 238);
             this.four.Name = "four";
             this.four.Size = new System.Drawing.Size(100, 41);
             this.four.TabIndex = 21;
             this.four.Text = "4";
-            this.four.UseVisualStyleBackColor = true;
+            this.four.UseVisualStyleBackColor = false;
             this.four.Click += new System.EventHandler(this.numbers_Click);
             // 
             // twoRaisedTo
@@ -325,44 +340,47 @@
             this.twoRaisedTo.Name = "twoRaisedTo";
             this.twoRaisedTo.Size = new System.Drawing.Size(100, 41);
             this.twoRaisedTo.TabIndex = 20;
-            this.twoRaisedTo.Text = "2^x";
+            this.twoRaisedTo.Text = "2¹⁰";
             this.twoRaisedTo.UseVisualStyleBackColor = true;
             this.twoRaisedTo.Click += new System.EventHandler(this.single_operator);
             // 
             // nine
             // 
+            this.nine.BackColor = System.Drawing.SystemColors.Menu;
             this.nine.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nine.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.nine.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.nine.Location = new System.Drawing.Point(321, 191);
             this.nine.Name = "nine";
             this.nine.Size = new System.Drawing.Size(100, 41);
             this.nine.TabIndex = 18;
             this.nine.Text = "9";
-            this.nine.UseVisualStyleBackColor = true;
+            this.nine.UseVisualStyleBackColor = false;
             this.nine.Click += new System.EventHandler(this.numbers_Click);
             // 
             // eight
             // 
+            this.eight.BackColor = System.Drawing.SystemColors.Menu;
             this.eight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.eight.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.eight.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.eight.Location = new System.Drawing.Point(215, 191);
             this.eight.Name = "eight";
             this.eight.Size = new System.Drawing.Size(100, 41);
             this.eight.TabIndex = 17;
             this.eight.Text = "8";
-            this.eight.UseVisualStyleBackColor = true;
+            this.eight.UseVisualStyleBackColor = false;
             this.eight.Click += new System.EventHandler(this.numbers_Click);
             // 
             // seven
             // 
+            this.seven.BackColor = System.Drawing.SystemColors.Menu;
             this.seven.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.seven.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.seven.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.seven.Location = new System.Drawing.Point(109, 191);
             this.seven.Name = "seven";
             this.seven.Size = new System.Drawing.Size(100, 41);
             this.seven.TabIndex = 16;
             this.seven.Text = "7";
-            this.seven.UseVisualStyleBackColor = true;
+            this.seven.UseVisualStyleBackColor = false;
             this.seven.Click += new System.EventHandler(this.numbers_Click);
             // 
             // squared
@@ -372,7 +390,7 @@
             this.squared.Name = "squared";
             this.squared.Size = new System.Drawing.Size(100, 41);
             this.squared.TabIndex = 15;
-            this.squared.Text = "x^2";
+            this.squared.Text = "x²";
             this.squared.UseVisualStyleBackColor = true;
             this.squared.Click += new System.EventHandler(this.single_operator);
             // 
@@ -396,6 +414,7 @@
             this.closeParenthesis.TabIndex = 12;
             this.closeParenthesis.Text = ")";
             this.closeParenthesis.UseVisualStyleBackColor = true;
+            this.closeParenthesis.Click += new System.EventHandler(this.closeParenthesis_Click);
             // 
             // openParenthesis
             // 
@@ -406,6 +425,7 @@
             this.openParenthesis.TabIndex = 11;
             this.openParenthesis.Text = "(";
             this.openParenthesis.UseVisualStyleBackColor = true;
+            this.openParenthesis.Click += new System.EventHandler(this.openParenthesis_Click);
             // 
             // squareRoot
             // 
@@ -414,7 +434,7 @@
             this.squareRoot.Name = "squareRoot";
             this.squareRoot.Size = new System.Drawing.Size(100, 41);
             this.squareRoot.TabIndex = 10;
-            this.squareRoot.Text = "x^(1/2)";
+            this.squareRoot.Text = "²√x";
             this.squareRoot.UseVisualStyleBackColor = true;
             this.squareRoot.Click += new System.EventHandler(this.single_operator);
             // 
@@ -447,7 +467,7 @@
             this.inverse.Name = "inverse";
             this.inverse.Size = new System.Drawing.Size(100, 41);
             this.inverse.TabIndex = 6;
-            this.inverse.Text = "1/x";
+            this.inverse.Text = "¹/ₓ";
             this.inverse.UseVisualStyleBackColor = true;
             this.inverse.Click += new System.EventHandler(this.single_operator);
             // 
@@ -458,8 +478,9 @@
             this.exponent.Name = "exponent";
             this.exponent.Size = new System.Drawing.Size(100, 41);
             this.exponent.TabIndex = 5;
-            this.exponent.Text = "x^y";
+            this.exponent.Text = "xʸ";
             this.exponent.UseVisualStyleBackColor = true;
+            this.exponent.Click += new System.EventHandler(this.exponent_Click);
             // 
             // modulus
             // 
@@ -470,6 +491,7 @@
             this.modulus.TabIndex = 4;
             this.modulus.Text = "mod";
             this.modulus.UseVisualStyleBackColor = true;
+            this.modulus.Click += new System.EventHandler(this.modulus_Click);
             // 
             // tangent
             // 
@@ -511,8 +533,9 @@
             this.root.Name = "root";
             this.root.Size = new System.Drawing.Size(100, 41);
             this.root.TabIndex = 0;
-            this.root.Text = "x^(1/y)";
+            this.root.Text = "ʸ√x";
             this.root.UseVisualStyleBackColor = true;
+            this.root.Click += new System.EventHandler(this.root_Click);
             // 
             // pi
             // 
@@ -521,7 +544,7 @@
             this.pi.Name = "pi";
             this.pi.Size = new System.Drawing.Size(100, 41);
             this.pi.TabIndex = 35;
-            this.pi.Text = "pi";
+            this.pi.Text = "π";
             this.pi.UseVisualStyleBackColor = true;
             this.pi.Click += new System.EventHandler(this.constants_Click);
             // 
@@ -532,7 +555,7 @@
             this.divide.Name = "divide";
             this.divide.Size = new System.Drawing.Size(104, 41);
             this.divide.TabIndex = 14;
-            this.divide.Text = "/";
+            this.divide.Text = "÷";
             this.divide.UseVisualStyleBackColor = true;
             this.divide.Click += new System.EventHandler(this.multiple_operators);
             // 
@@ -543,7 +566,7 @@
             this.multiply.Name = "multiply";
             this.multiply.Size = new System.Drawing.Size(104, 41);
             this.multiply.TabIndex = 19;
-            this.multiply.Text = "*";
+            this.multiply.Text = "×";
             this.multiply.UseVisualStyleBackColor = true;
             this.multiply.Click += new System.EventHandler(this.multiple_operators);
             // 
@@ -571,6 +594,7 @@
             // 
             // equals
             // 
+            this.equals.BackColor = System.Drawing.SystemColors.ControlDark;
             this.equals.Dock = System.Windows.Forms.DockStyle.Fill;
             this.equals.Location = new System.Drawing.Point(427, 285);
             this.equals.Name = "equals";
@@ -578,7 +602,7 @@
             this.equals.Size = new System.Drawing.Size(104, 95);
             this.equals.TabIndex = 34;
             this.equals.Text = "=";
-            this.equals.UseVisualStyleBackColor = true;
+            this.equals.UseVisualStyleBackColor = false;
             this.equals.Click += new System.EventHandler(this.equals_Click);
             // 
             // splitContainer1
@@ -651,6 +675,7 @@
             this.calculatorLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.calculatorLabel.Location = new System.Drawing.Point(3, 0);
             this.calculatorLabel.Name = "calculatorLabel";
+            this.calculatorLabel.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.calculatorLabel.Size = new System.Drawing.Size(528, 50);
             this.calculatorLabel.TabIndex = 2;
             this.calculatorLabel.Text = "Scientific";
