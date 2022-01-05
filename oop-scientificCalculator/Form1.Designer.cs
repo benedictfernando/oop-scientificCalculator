@@ -414,7 +414,6 @@
             this.closeParenthesis.TabIndex = 12;
             this.closeParenthesis.Text = ")";
             this.closeParenthesis.UseVisualStyleBackColor = true;
-            this.closeParenthesis.Click += new System.EventHandler(this.closeParenthesis_Click);
             // 
             // openParenthesis
             // 
@@ -425,7 +424,6 @@
             this.openParenthesis.TabIndex = 11;
             this.openParenthesis.Text = "(";
             this.openParenthesis.UseVisualStyleBackColor = true;
-            this.openParenthesis.Click += new System.EventHandler(this.openParenthesis_Click);
             // 
             // squareRoot
             // 
@@ -480,7 +478,7 @@
             this.exponent.TabIndex = 5;
             this.exponent.Text = "xʸ";
             this.exponent.UseVisualStyleBackColor = true;
-            this.exponent.Click += new System.EventHandler(this.exponent_Click);
+            this.exponent.Click += new System.EventHandler(this.multiple_operators);
             // 
             // modulus
             // 
@@ -491,7 +489,7 @@
             this.modulus.TabIndex = 4;
             this.modulus.Text = "mod";
             this.modulus.UseVisualStyleBackColor = true;
-            this.modulus.Click += new System.EventHandler(this.modulus_Click);
+            this.modulus.Click += new System.EventHandler(this.multiple_operators);
             // 
             // tangent
             // 
@@ -535,7 +533,7 @@
             this.root.TabIndex = 0;
             this.root.Text = "ʸ√x";
             this.root.UseVisualStyleBackColor = true;
-            this.root.Click += new System.EventHandler(this.root_Click);
+            this.root.Click += new System.EventHandler(this.multiple_operators);
             // 
             // pi
             // 
@@ -603,7 +601,7 @@
             this.equals.TabIndex = 34;
             this.equals.Text = "=";
             this.equals.UseVisualStyleBackColor = false;
-            this.equals.Click += new System.EventHandler(this.equals_Click);
+            this.equals.Click += new System.EventHandler(this.multiple_operators);
             // 
             // splitContainer1
             // 
