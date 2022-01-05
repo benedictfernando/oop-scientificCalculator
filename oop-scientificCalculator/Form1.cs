@@ -43,7 +43,7 @@ namespace oop_scientificCalculator
         {
             if (entry.Text == "3.1415926535897931" ||
                 entry.Text == "2.7182818284590451" ||
-                entry.Text == "0" || operatorClick) entry.Text = "";
+                entry.Text == "0" || operatorClick) { entry.Text = ""; }
             entry.Text += (sender as Button).Text; operatorClick = false;
         }
 
@@ -140,66 +140,78 @@ namespace oop_scientificCalculator
 
         private void multiple_operators(object sender, EventArgs e)
         {
-            operatorClick = true;
-            entryValue = Double.Parse(entry.Text);
             string mainOperator = (sender as Button).Name;
-            equation.Text += entry.Text + (sender as Button).Text;
+            string buttonText = (sender as Button).Text;
+            string entryText = entry.Text;
 
-            if (currentOperator == null)
+            if (!operatorClick)
             {
-                rightEntry = entryValue; 
-                currentOperator = mainOperator;
-            }
-            else
-            {
-                leftEntry = rightEntry; rightEntry = entryValue;
-                previousOperator = currentOperator;
-                currentOperator = mainOperator;
-            }
+                if (mainOperator == "root") {
+                    char[] superscript = {
+                        '⁰', '¹', '²', '³', '⁴', '⁵', '⁶', '⁷', '⁸', '⁹'
+                    }; buttonText = "√"; entryText = "";
+                    foreach (char c in entry.Text)
+                        entryText += superscript[c - '0'];
+                } else if (mainOperator == "exponent") { buttonText = "^"; }
 
-            if (multiple_Complete())
-            {
-                switch (previousOperator)
+                entryValue = Double.Parse(entry.Text);
+                if (currentOperator == null)
                 {
-                    // for arithmethic equations
-                    case "add":
-                        entry.Text = (leftEntry + rightEntry).ToString();
-                        break;
-                    case "subtract":
-                        entry.Text = (leftEntry - rightEntry).ToString();
-                        break;
-                    case "multiply":
-                        entry.Text = (leftEntry * rightEntry).ToString();
-                        break;
-                    case "divide":
-                        entry.Text = (leftEntry / rightEntry).ToString();
-                        break;
-                    case "modulus":
-                        entry.Text = (leftEntry % rightEntry).ToString();
-                        break;
-
-                    // for algrebraic equations
-                    case "root":
-                        entry.Text = Math.Pow(leftEntry, 1 / rightEntry).ToString();
-                        break;
-                    case "exponent":
-                        entry.Text = Math.Pow(leftEntry, rightEntry).ToString();
-                        break;
-
-                    default: break;
+                    rightEntry = entryValue;
+                    currentOperator = mainOperator;
+                }
+                else
+                {
+                    leftEntry = rightEntry; rightEntry = entryValue;
+                    previousOperator = currentOperator;
+                    currentOperator = mainOperator;
                 }
 
-                // re-initialize variables
-                leftEntry = double.Parse(entry.Text);
-                previousOperator = currentOperator;
-                currentOperator = null;
-
-                if (mainOperator == "equals")
+                if (multiple_Complete())
                 {
-                    leftEntry = rightEntry = double.NaN;
-                    previousOperator = null; equation.Text = "";
-                }
+                    switch (previousOperator)
+                    {
+                        // for arithmethic equations
+                        case "add":
+                            entry.Text = (leftEntry + rightEntry).ToString();
+                            break;
+                        case "subtract":
+                            entry.Text = (leftEntry - rightEntry).ToString();
+                            break;
+                        case "multiply":
+                            entry.Text = (leftEntry * rightEntry).ToString();
+                            break;
+                        case "divide":
+                            entry.Text = (leftEntry / rightEntry).ToString();
+                            break;
+                        case "modulus":
+                            entry.Text = (leftEntry % rightEntry).ToString();
+                            break;
+
+                        // for algrebraic equations
+                        case "root":
+                            entry.Text = Math.Pow(rightEntry, 1 / leftEntry).ToString();
+                            break;
+                        case "exponent":
+                            entry.Text = Math.Pow(leftEntry, rightEntry).ToString();
+                            break;
+
+                        default: break;
+                    }
+
+                    // re-initialize variables
+                    leftEntry = double.Parse(entry.Text);
+                    previousOperator = currentOperator; currentOperator = null;
+                } equation.Text += $"{entryText} {buttonText} ";  // print equation
             }
+            else if (previousOperator == "equals" && operatorClick)
+            {
+                previousOperator = mainOperator;
+                equation.Text = $"{leftEntry} {buttonText} ";   // print equation
+            }
+
+            // track when user had clicked an operator
+            operatorClick = true;
         }
     }
 }
