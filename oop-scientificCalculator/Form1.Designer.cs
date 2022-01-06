@@ -531,7 +531,7 @@
             this.root.Name = "root";
             this.root.Size = new System.Drawing.Size(100, 41);
             this.root.TabIndex = 0;
-            this.root.Text = "ʸ√x";
+            this.root.Text = "ˣ√y";
             this.root.UseVisualStyleBackColor = true;
             this.root.Click += new System.EventHandler(this.multiple_operators);
             // 
