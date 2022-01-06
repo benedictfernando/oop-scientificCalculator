@@ -236,5 +236,11 @@ namespace oop_scientificCalculator
             // track when user had clicked an operator
             operatorClick = true;
         }
+
+        private void powerOff_Click(object sender, EventArgs e)
+        {
+            if (Application.MessageLoop) Application.Exit();    // WinForms app
+            else Environment.Exit(1);   // Console app
+        }
     }
 }
