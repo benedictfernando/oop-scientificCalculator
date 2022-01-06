@@ -41,6 +41,10 @@ namespace oop_scientificCalculator
 
         private void numbers_Click(object sender, EventArgs e)
         {
+            // clear entries when any number is clicked after "equals" operator
+            if (previousOperator == "equals" && operatorClick)
+            { previousOperator = null; equation.Text = ""; }
+
             if (entry.Text == "3.1415926535897931" ||
                 entry.Text == "2.7182818284590451" ||
                 entry.Text == "0" || operatorClick) { entry.Text = ""; }
