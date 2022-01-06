@@ -208,10 +208,29 @@ namespace oop_scientificCalculator
                     previousOperator = currentOperator; currentOperator = null;
                 } equation.Text += $"{entryText} {buttonText} ";  // print equation
             }
-            else if (previousOperator == "equals" && operatorClick)
+            else
             {
-                previousOperator = mainOperator;
-                equation.Text = $"{leftEntry} {buttonText} ";   // print equation
+                // disable root & exponent buttons for sake of simplicity
+                if (mainOperator != "root" && mainOperator != "exponent")
+                {
+                    string prior;
+
+                    if (previousOperator == "equals")
+                    { previousOperator = mainOperator; prior = leftEntry.ToString(); }
+                    else
+                    {
+                        int eqLength = equation.Text.Length, newLength;
+                        if ((previousOperator == null && currentOperator == "modulus") || 
+                            previousOperator == "modulus") newLength = eqLength - 5;
+                        else newLength = eqLength - 3;
+                        prior = equation.Text.Remove(newLength);
+
+                        if (currentOperator != null) currentOperator = mainOperator;
+                        else previousOperator = mainOperator;
+                    }
+
+                    equation.Text = $"{prior} {buttonText} ";   // print equation
+                }
             }
 
             // track when user had clicked an operator
