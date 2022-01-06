@@ -53,10 +53,14 @@ namespace oop_scientificCalculator
 
         private void constants_Click(object sender, EventArgs e)
         {
+            // same as first 3 lines of code from numbers_Click
+            if (previousOperator == "equals" && operatorClick)
+            { previousOperator = null; equation.Text = ""; }
+
+            operatorClick = false;
             if ((sender as Button).Name == "pi")
                 entry.Text = "3.1415926535897931";
-            else if ((sender as Button).Name == "euler")
-                entry.Text = "2.7182818284590451";
+            else entry.Text = "2.7182818284590451";
         }
 
         private void signToggle_Click(object sender, EventArgs e)
